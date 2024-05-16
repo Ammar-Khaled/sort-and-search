@@ -59,4 +59,6 @@ void bitonicSort(int *arr, int low, int cnt, int dir, int size);
 void bitonic_sort(int *array, size_t size);
 void bitonicMerge(int *arr, int low, int cnt, int dir, int size);
 
+
+listint_t *create_doubly_listint(const int *array, size_t size);
 #endif
