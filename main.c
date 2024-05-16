@@ -3,11 +3,7 @@
 #include "sorting_algorithms/sort.h"
 #include "searching_algorithms/search_algos.h"
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
+
 int main(void)
 {
     int array[] = {0, 4, 5, 1, 2};

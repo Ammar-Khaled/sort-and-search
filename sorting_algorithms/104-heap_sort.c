@@ -1,18 +1,6 @@
 #include "sort.h"
 
 /**
- * swap - swap two integers
- * @a: the first integer
- * @b: the second integer
- */
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-/**
  * heapify - heapify a subtree rooted with node i
  * @array: pointer to an array of integers.
  * @size: number of elements in the heap array.

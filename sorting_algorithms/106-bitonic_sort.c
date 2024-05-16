@@ -2,18 +2,6 @@
 #include <string.h>
 
 /**
- * swap - swap two integers
- * @a: the first integer
- * @b: the second integer
- */
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-/**
  * bitonicMerge - bitonicMerge
  * @arr: array
  * @low: low index

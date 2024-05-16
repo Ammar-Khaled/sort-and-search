@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <math.h>
 
 /**
  * jump_list - searches for a value in an ascendingly-sorted
@@ -29,7 +30,7 @@ singly_listint_t *jump_list(singly_listint_t *list, size_t size, int value)
 		while (list->index < limit && list->next)
 			list = list->next;
 
-		printf("Value checked at index [%llu] = [%d]\n", list->index, list->n);
+		printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
 	} while (list->n < value && list->next);
 
 	printf("Value found between indexes ");

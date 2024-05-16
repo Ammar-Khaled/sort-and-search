@@ -1,18 +1,6 @@
 #include "sort.h"
 
 /**
- * swap - swap two integers
- * @a: the first integer
- * @b: the second integer
- */
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-/**
  * hoare_partition - takes the last element as `pivot`,
  * places it at its correct position in sorted array,
  * such that all smaller elements are to the left of `pivot`
@@ -60,13 +48,13 @@ int hoare_partition(int *array, int low, int high, size_t size)
 }
 
 /**
- * q_sort - recursive function for the quick sort
+ * _quick_sort_hoare - recursive function for the quick sort
  * @array: array of integers
  * @low: the starting index
  * @high: the ending index
  * @size: size of the whole array => required for printing
  */
-void q_sort(int *array, int low, int high, size_t size)
+void _quick_sort_hoare(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
@@ -74,9 +62,9 @@ void q_sort(int *array, int low, int high, size_t size)
 		/* array[pivot_index] is now at right place */
 
 		/* quick_sort the left subarray */
-		q_sort(array, low, pivot_index - 1, size);
+		_quick_sort_hoare(array, low, pivot_index - 1, size);
 		/* quick_sort the right subarray */
-		q_sort(array, pivot_index, high, size);
+		_quick_sort_hoare(array, pivot_index, high, size);
 	}
 }
 
@@ -88,5 +76,5 @@ void q_sort(int *array, int low, int high, size_t size)
  */
 void quick_sort_hoare(int *array, size_t size)
 {
-	q_sort(array, 0, size - 1, size);
+	_quick_sort_hoare(array, 0, size - 1, size);
 }
