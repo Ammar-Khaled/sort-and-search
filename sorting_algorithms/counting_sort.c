@@ -35,6 +35,7 @@ void counting_sort(int *array, size_t size)
 	for (i = 1; i <= max; ++i)
 		count[i] += count[i - 1]; /* cumulate count */
 
+	printf("cumulated counting array: ");
 	print_array(count, max + 1);
 
 	for (i = size - 1; i >= 0; i--) /* build output array */
@@ -42,6 +43,7 @@ void counting_sort(int *array, size_t size)
 		output[count[array[i]] - 1] = array[i];
 		count[array[i]]--;
 	}
+	print_array(output, size);
 
 	for (i = 0; i < (int)size; ++i)
 		array[i] = output[i]; /* copy output into array */

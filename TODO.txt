@@ -1,0 +1,9 @@
+do input validation
+ensure same function prototypes
+shorten the main:
+  separate switch from main using a pointer function
+  separate printing options
+eliminate lists from coktail
+
+bitonic sort
+docs

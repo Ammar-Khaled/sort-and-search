@@ -2,14 +2,14 @@
 #include <string.h>
 
 /**
- * bitonicMerge - bitonicMerge
+ * bitonic_merge - bitonic_merge
  * @arr: array
  * @low: low index
  * @cnt: count
  * @dir: direction
  * @size: size
  */
-void bitonicMerge(int *arr, int low, int cnt, int dir, int size)
+void bitonic_merge(int *arr, int low, int cnt, int dir, int size)
 {
 	int k, i;
 	char *direction;
@@ -36,8 +36,8 @@ void bitonicMerge(int *arr, int low, int cnt, int dir, int size)
 			}
 		}
 
-		bitonicMerge(arr, low, k, dir, size);
-		bitonicMerge(arr, low + k, k, dir, size);
+		bitonic_merge(arr, low, k, dir, size);
+		bitonic_merge(arr, low + k, k, dir, size);
 
 
 		printf("Result [%i/%i] (%s):\n", cnt, size, direction);
@@ -47,14 +47,14 @@ void bitonicMerge(int *arr, int low, int cnt, int dir, int size)
 }
 
 /**
- * bitonicSort - bitonicSort
+ * _bitonic_sort - _bitonic_sort
  * @arr: array
  * @low: low index
  * @cnt: count
  * @dir: direction
  * @size: size
  */
-void bitonicSort(int *arr, int low, int cnt, int dir, int size)
+void _bitonic_sort(int *arr, int low, int cnt, int dir, int size)
 {
 	int k;
 
@@ -75,9 +75,9 @@ void bitonicSort(int *arr, int low, int cnt, int dir, int size)
 		printf("Merging [%i/%i] (%s):\n", cnt, size, direction);
 		print_array(arr, cnt);
 
-		bitonicSort(arr, low, k, 1, size);
-		bitonicSort(arr, low + k, k, 0, size);
-		bitonicMerge(arr, low, cnt, dir, size);
+		_bitonic_sort(arr, low, k, 1, size);
+		_bitonic_sort(arr, low + k, k, 0, size);
+		bitonic_merge(arr, low, cnt, dir, size);
 	}
 }
 
@@ -88,5 +88,5 @@ void bitonicSort(int *arr, int low, int cnt, int dir, int size)
  */
 void bitonic_sort(int *array, size_t size)
 {
-	bitonicSort(array, 0, size, 1, size);
+	_bitonic_sort(array, 0, size, 1, size);
 }

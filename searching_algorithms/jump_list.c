@@ -13,10 +13,10 @@
  * Time: O(?)
  * Note: compile with -lm to link <math.h>
  */
-singly_listint_t *jump_list(singly_listint_t *list, size_t size, int value)
+listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t step, limit;
-	singly_listint_t *prev;
+	listint_t *prev;
 
 	if (!list || size < 1)
 		return (NULL);

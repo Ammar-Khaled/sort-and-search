@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "../searching_algorithms/search_algos.h"
 
-void free_list(singly_listint_t *list);
+void free_list(listint_t *list);
 
 /**
  * create_list - Creates a single linked list
@@ -11,10 +11,10 @@ void free_list(singly_listint_t *list);
  *
  * Return: A pointer to the head of the created list (NULL on failure)
  */
-singly_listint_t *create_singly_list(int *array, size_t size)
+listint_t *create_singly_list(int *array, size_t size)
 {
-	singly_listint_t *list;
-	singly_listint_t *node;
+	listint_t *list;
+	listint_t *node;
 
 	list = NULL;
 	while (array && size--)

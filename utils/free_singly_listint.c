@@ -6,9 +6,9 @@
  *
  * @list: Pointer to the linked list to be freed
  */
-void free_list(singly_listint_t *list)
+void free_list(listint_t *list)
 {
-	singly_listint_t *node;
+	listint_t *node;
 
 	if (list)
 	{

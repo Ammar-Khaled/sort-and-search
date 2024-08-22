@@ -14,6 +14,7 @@
 typedef struct listint_s
 {
 	int n;
+	size_t index;
 	struct listint_s *prev;
 	struct listint_s *next;
 } listint_t;
@@ -22,6 +23,7 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void swap(int *a, int *b);
+int get_list_len(listint_t **list);
 
 void bubble_sort(int *array, size_t size);
 
@@ -37,10 +39,9 @@ int hoare_partition(int *array, int low, int high, size_t size);
 void _quick_sort_hoare(int *array, int low, int high, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-
 void shell_sort(int *array, size_t size);
 
-void cocktail_sort_list(listint_t **list);
+void cocktail_sort(int *array, size_t size);
 
 void counting_sort(int *array, size_t size);
 
@@ -54,11 +55,9 @@ void heapify(int *array, size_t size, int i, size_t total_size);
 void count_sort_for_radix(int *array, int n, int placement_value);
 void radix_sort(int *array, size_t size);
 
-
-void bitonicSort(int *arr, int low, int cnt, int dir, int size);
+void _bitonic_sort(int *arr, int low, int cnt, int dir, int size);
 void bitonic_sort(int *array, size_t size);
-void bitonicMerge(int *arr, int low, int cnt, int dir, int size);
-
+void bitonic_merge(int *arr, int low, int cnt, int dir, int size);
 
 listint_t *create_doubly_listint(const int *array, size_t size);
 #endif
