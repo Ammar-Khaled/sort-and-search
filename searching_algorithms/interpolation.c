@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
  * interpolation_search - searches for a value in an ascendingly-sorted and
@@ -9,9 +10,9 @@
  *
  * Return: the `first` index where @value is located, or -1 otherwise
  */
-int interpolation_search(int *array, size_t size, int value)
+int interpolation_search(int *array, int size, int value)
 {
-	size_t l, h, pos;
+	int l, h, pos;
 
 	if (!array || size < 1)
 		return (-1);
@@ -22,14 +23,14 @@ int interpolation_search(int *array, size_t size, int value)
 	{
 		pos = l + (((double)(h - l) / (array[h] - array[l])) * (value - array[l]));
 
-		printf("Value checked array[%lu]", pos);
+		printf("Value checked array[%d]", pos);
 		if (pos >= size)
 		{
 			printf(" is out of range\n");
 			return (-1);
 		}
 		else
-			printf(" = [%i]\n", array[pos]);
+			printf(" = %i\n", array[pos]);
 
 		if (array[pos] == value)
 			return (pos);

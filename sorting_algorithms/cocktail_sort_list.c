@@ -6,7 +6,7 @@
  * using the Cocktail shaker sort algorithm
  * @list: list of integers
  */
-void cocktail_sort(int *array, size_t size)
+void cocktail_sort(int *array, int size)
 {
 	int start, end, i, swapped;
 

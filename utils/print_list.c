@@ -1,4 +1,5 @@
 #include "../sorting_algorithms/sort.h"
+#include <stdio.h>
 
 /**
  * print_list - Prints a doubly linked list of integers

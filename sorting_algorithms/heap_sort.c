@@ -8,7 +8,7 @@
  * @total_size: size of the input array -> required for printing
  *
  */
-void heapify(int *array, size_t size, int i, size_t total_size)
+void heapify(int *array, int size, int i, int total_size)
 {
 	/* indexes for left and right children and largest among them and their root*/
 	int left, right, largest;
@@ -20,12 +20,12 @@ void heapify(int *array, size_t size, int i, size_t total_size)
 	left = 2 * i + 1;
 	right = 2 * i + 2;
 
-	if ((size_t)left < size && array[left] > array[largest])
+	if (left < size && array[left] > array[largest])
 	{
 		largest = left;
 	}
 
-	if ((size_t)right < size && array[right] > array[largest])
+	if (right < size && array[right] > array[largest])
 	{
 		largest = right;
 	}
@@ -47,7 +47,7 @@ void heapify(int *array, size_t size, int i, size_t total_size)
  * @array: pointer to an array of integers.
  * @size: number of elements in the array.
  */
-void heap_sort(int *array, size_t size)
+void heap_sort(int *array, int size)
 {
 	int i;
 

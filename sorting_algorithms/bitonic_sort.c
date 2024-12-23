@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * bitonic_merge - bitonic_merge
@@ -86,7 +87,7 @@ void _bitonic_sort(int *arr, int low, int cnt, int dir, int size)
  * @array: array
  * @size: size
  */
-void bitonic_sort(int *array, size_t size)
+void bitonic_sort(int *array, int size)
 {
 	_bitonic_sort(array, 0, size, 1, size);
 }

@@ -1,1 +1,2 @@
-O(sqrt(n))
+Time Complexity: O(sqrt(n))
+Space Complexity: O(1)

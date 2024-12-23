@@ -1,0 +1,2 @@
+Time complexity: O(n^2) Theta(n^2)  Omega(n)
+Space complexity: O(1)

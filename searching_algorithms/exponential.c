@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
  * exponential_search - searches for a value in an ascendingly-sorted
@@ -10,28 +11,28 @@
  * Return: the `first` index where @value is located, or -1 otherwise
  * Time: O(log(i))
  */
-int exponential_search(int *array, size_t size, int value)
+int exponential_search(int *array, int size, int value)
 {
-	size_t i, left, right, mid;
+	int i, left, right, mid;
 
 	if (!array || size < 1)
 		return (-1);
 	i = 1;
 	while (i < size && array[i] < value)
 	{
-		printf("Value checked array[%lu] = [%i]\n", i, array[i]);
+		printf("Value checked array[%d] = %i\n", i, array[i]);
 		i *= 2;
 	}
-	printf("Value found between indexes [%lu] and ", i / 2);
+	printf("Value found between indexes [%d] and ", i / 2);
 	left = i / 2;
 	if (i >= size)
 	{
-		printf("[%lu]\n", size - 1);
+		printf("[%d]\n", size - 1);
 		right = size - 1;
 	}
 	else
 	{
-		printf("[%lu]\n", i);
+		printf("[%d]\n", i);
 		right = i;
 	}
 	while (left <= right)

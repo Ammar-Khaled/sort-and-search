@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
  * binary_search - searches for a value in a sorted array of integers
@@ -10,9 +11,9 @@
  *
  * Return: the index where @value is located, or -1 otherwise
  */
-int binary_search(int *array, size_t size, int value)
+int binary_search(int *array, int size, int value)
 {
-	size_t i, left, right, mid;
+	int i, left, right, mid;
 
 	if (!array || size < 1)
 		return (-1);

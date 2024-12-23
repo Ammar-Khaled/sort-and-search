@@ -10,10 +10,10 @@ void free_skiplist(skiplist_t *list);
  * @list: Pointer to the head node of the list
  * @size: Number of nodes in the list
  */
-void init_express(skiplist_t *list, size_t size)
+void init_express(skiplist_t *list, int size)
 {
-	const size_t step = sqrt(size);
-	size_t i;
+	const int step = sqrt(size);
+	int i;
 	skiplist_t *save;
 
 	for (save = list, i = 0; i < size; ++i, list = list->next)
@@ -34,11 +34,11 @@ void init_express(skiplist_t *list, size_t size)
  *
  * Return: A pointer to the head of the created list (NULL on failure)
  */
-skiplist_t *create_skiplist(int *array, size_t size)
+skiplist_t *create_skiplist(int *array, int size)
 {
 	skiplist_t *list;
 	skiplist_t *node;
-	size_t save_size;
+	int save_size;
 
 	list = NULL;
 	save_size = size;

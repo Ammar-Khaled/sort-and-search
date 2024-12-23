@@ -6,9 +6,9 @@
  * @array: pointer to the array to be sorted
  * @size: size of the array to be sorted
  */
-void selection_sort(int *array, size_t size)
+void selection_sort(int *array, int size)
 {
-	unsigned int i, j, index_of_min;
+	int i, j, index_of_min;
 
 	/* for each unsorted subarray starting i to the end */
 	for (i = 0; i < size - 1; ++i)

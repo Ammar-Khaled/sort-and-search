@@ -1,4 +1,5 @@
 #include "search_algos.h"
+#include <stdio.h>
 
 /**
  * bs - searches for a value within a range in a sorted array
@@ -64,7 +65,7 @@ int bs(int *array, int value, int left, int right)
  *
  * Return: the `first` index where @value is located, or -1 otherwise
  */
-int advanced_binary(int *array, size_t size, int value)
+int advanced_binary(int *array, int size, int value)
 {
 	if (!array || size < 1)
 		return (-1);

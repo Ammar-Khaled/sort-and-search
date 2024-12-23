@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdlib.h>
 
 /**
  * count_sort_for_radix - does a stable count sort for each digit
@@ -53,13 +54,13 @@ void count_sort_for_radix(int *array, int n, int placement_value)
  * @array: array
  * @size: size
  */
-void radix_sort(int *array, size_t size)
+void radix_sort(int *array, int size)
 {
 	int max, i, placement_value;
 
 	/* find max element to determine the max number of digits */
 	max = array[0];
-	for (i = 1; i < (int)size; ++i)
+	for (i = 1; i < size; ++i)
 		if (array[i] > max)
 			max = array[i];
 

@@ -1,5 +1,6 @@
 #include "sort.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * merge - Merges two sorted sub-arrays of array[].
@@ -81,7 +82,7 @@ void m_sort(int *array, int begin, int end)
  * @array: array
  * @size: size
  */
-void merge_sort(int *array, size_t size)
+void merge_sort(int *array, int size)
 {
 	m_sort(array, 0, size - 1);
 }

@@ -1,4 +1,6 @@
 #include "sort.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * counting_sort - sorts an array of integers in ascending order
@@ -6,12 +8,12 @@
  * @array: array
  * @size: size
  */
-void counting_sort(int *array, size_t size)
+void counting_sort(int *array, int size)
 {
 	int max, i, *count, *output;
 
 	max = array[0];
-	for (i = 1; i < (int)size; ++i)
+	for (i = 1; i < size; ++i)
 		if (array[i] > max)
 			max = array[i];
 
@@ -29,7 +31,7 @@ void counting_sort(int *array, size_t size)
 		exit(EXIT_FAILURE);
 	}
 
-	for (i = 0; i < (int)size; ++i)
+	for (i = 0; i < size; ++i)
 		count[array[i]]++; /* compute frequencies of elements */
 
 	for (i = 1; i <= max; ++i)
@@ -45,7 +47,7 @@ void counting_sort(int *array, size_t size)
 	}
 	print_array(output, size);
 
-	for (i = 0; i < (int)size; ++i)
+	for (i = 0; i < size; ++i)
 		array[i] = output[i]; /* copy output into array */
 	free(count);
 	free(output);

@@ -7,13 +7,13 @@
  * @array: array
  * @size: size
  */
-void shell_sort(int *array, size_t size)
+void shell_sort(int *array, int size)
 {
 	int gap, i, j, tmp;
 
 	/* generate Knuth Gap Sequence */
 	gap = 1;
-	while (gap < (int)size)
+	while (gap < size)
 	{
 		gap = 3 * gap + 1;
 	}
@@ -34,7 +34,7 @@ void shell_sort(int *array, size_t size)
 
 	for (gap = (gap - 1) / 3; gap > 0; gap = (gap - 1) / 3)
 	{
-		for (i = gap; i < (int)size; i++)
+		for (i = gap; i < size; i++)
 		{
 			tmp = array[i];
 

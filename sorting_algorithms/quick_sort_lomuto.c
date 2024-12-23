@@ -12,7 +12,7 @@
  * @size: size of the whole array => required for printing
  * Return: index of the `pivot` after placing in the right place
  */
-int lomuto_partition(int *array, int low, int high, size_t size)
+int lomuto_partition(int *array, int low, int high, int size)
 {
 	int j;
 
@@ -59,7 +59,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
  * @high: the ending index
  * @size: size of the whole array => required for printing
  */
-void _quick_sort_lomuto(int *array, int low, int high, size_t size)
+void _quick_sort_lomuto(int *array, int low, int high, int size)
 {
 	if (low < high)
 	{
@@ -78,7 +78,7 @@ void _quick_sort_lomuto(int *array, int low, int high, size_t size)
  * @array: array of integers
  * @size: size of the array
  */
-void quick_sort_lomuto(int *array, size_t size)
+void quick_sort_lomuto(int *array, int size)
 {
 	_quick_sort_lomuto(array, 0, size - 1, size);
 }

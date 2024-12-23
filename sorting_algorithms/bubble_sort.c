@@ -1,13 +1,14 @@
 #include "sort.h"
+#include <stdio.h>
 
 /**
  * bubble_sort - implements Bubble Sort Algorithm
  * @array: pointer to the array to be sorted
  * @size: size of the array to be sorted
  */
-void bubble_sort(int *array, size_t size)
+void bubble_sort(int *array, int size)
 {
-	unsigned int swapped = 0, i, j;
+	int swapped = 0, i, j;
 
 	/* loop n-1 iterations */
 	for (i = 0; i < size; ++i)
